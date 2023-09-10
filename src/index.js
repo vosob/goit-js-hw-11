@@ -72,7 +72,7 @@ const loadData = (q, page) => {
   isLoading = true;
 
   const url = queryString.stringifyUrl({
-    url: 'https://pixabay.com/api/',
+    url: 'https://pixabay.com/api',
     query: {
       q,
       page,
@@ -115,7 +115,7 @@ const loadMore = () => {
     appeandCards(hits);
     console.log({ total, totalHits });
     if (total >= totalHits) {
-      // hideLoadMore();zЯzяяя
+      // hideLoadMore();
       isLastFetched = true;
       Notiflix.Notify.warning(
         `We're sorry, but you've reached the end of search results.`

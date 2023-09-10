@@ -6,9 +6,12 @@ export let total = 0;
 export let isLoading = false;
 export const PER_PAGE = 40;
 
-export const loadData = async (q, page) => {
+export const loadData = async (q, page, resetTotal) => {
   if (!q)
     throw new Erorr("Помилка: параметр 'q' не визначено або має значення null");
+  if (resetTotal) {
+    total = 0;
+  }
   isLoading = true;
 
   const url = queryString.stringifyUrl({

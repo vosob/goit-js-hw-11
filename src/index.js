@@ -59,13 +59,12 @@ const submitHandler = async e => {
 
   if (!q) return;
 
-  total = 0;
   page = 1;
   isLastFetched = false;
 
   // hideLoadMore();
 
-  const response = await loadData(q, page);
+  const response = await loadData(q, page, true);
   if (response === null) {
     return;
   }

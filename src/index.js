@@ -72,7 +72,7 @@ const loadData = (q, page) => {
   isLoading = true;
 
   const url = queryString.stringifyUrl({
-    url: 'https://pixabay.com/api',
+    url: 'https://pixabay.com/api/',
     query: {
       q,
       page,
